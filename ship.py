@@ -39,25 +39,6 @@ class Ship():
 		self.screen.blit(self.image, self.rect)
 
 
-class Pers():
-	"""Тестовый класс"""
-
-	def __init__(self, ai_game):
-		"""Инициализирует тестового перса"""
-
-		self.screen = ai_game.screen
-		self.screen_rect = ai_game.screen.get_rect()
-
-		self.rect = pygame.Rect(150, 150, 150, 150)
-		self.color = (52, 152, 219)
-
-
-		self.rect.center= self.screen_rect.center
-
-	def blitme(self):
-		pygame.draw.rect(self.screen, self.color, self.rect)
-
-
 
 
 
