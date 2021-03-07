@@ -53,7 +53,7 @@ class AlienInvasion():
 			sys.exit()
 		if event.key == pygame.K_SPACE:
 			self._fire_bullet()
-		if event.key == pygame.K_p
+		if event.key == pygame.K_p:
 			self.start_game()
 
 	def _check_keyup_events(self, event):
