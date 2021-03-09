@@ -38,6 +38,7 @@ class AlienInvasion():
 		"""Обрабатывает нажатия клавиатуры и события мыши"""
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
+				self.stats.set_record_to_file(self.stats.high_score)
 				sys.exit()
 			elif event.type == pygame.KEYDOWN:
 				self._check_keydown_events(event)
@@ -54,6 +55,7 @@ class AlienInvasion():
 		if event.key == pygame.K_LEFT:
 			self.ship.moving_left = True
 		if event.key == pygame.K_q:
+			self.stats.set_record_to_file(self.stats.high_score)
 			sys.exit()
 		if event.key == pygame.K_SPACE:
 			self._fire_bullet()
