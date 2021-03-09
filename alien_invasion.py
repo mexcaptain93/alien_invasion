@@ -76,6 +76,7 @@ class AlienInvasion():
 			self.start_game()
 			self.sb.prep_score()
 			self.sb.prep_level()
+			self.sb.prep_ships()
 
 	def start_game(self):
 		self.stats.reset_stats()
@@ -185,6 +186,8 @@ class AlienInvasion():
 		"""Обрабатывает столкновение с кораблём"""
 		if self.stats.ship_left > 0:
 			self.stats.ship_left -= 1
+			self.sb.prep_ships()
+
 			self.aliens.empty()
 			self.bullets.empty()
 
